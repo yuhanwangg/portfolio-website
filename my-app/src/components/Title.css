@@ -1,0 +1,15 @@
+.title {
+    font-size: 7em;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    margin: 0;
+}
+
+.archivo-narrow {
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+.dm-serif {
+    font-family: 'DM Serif Text', serif;
+    font-style: italic;
+}

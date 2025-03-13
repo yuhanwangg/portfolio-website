@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;700&family=DM+Serif+Text:ital,wght@400;700&family=Lora:wght@400;700&display=swap');
+
+:root {
+  font-family: system-ui, 'Inter', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #242330;
+  background-color: #F1F0EB;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 5em;
+  line-height: 1;
+  font-family: 'Archivo Narrow', sans-serif;
+  /* This ensures h1 uses Archivo Narrow unless specified otherwise */
+}
+
+h2 {
+  font-family: 'Lora', serif;
+  font-size: 2em;
+  font-weight: 150;
+}
+
+p {
+  font-size: 0.9em;
+}
+
+.italic-serif {
+  font-family: 'DM Serif Text', serif;
+}
+
+.italic-text {
+  font-style: italic;
+}

@@ -1,0 +1,24 @@
+.card {
+    margin-top: 3em;
+    display: flex;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    padding: 2em;
+    flex-direction: row;
+    width: 80%;
+}
+
+.card-content {
+    display: flex;
+    border-style: solid;
+    flex-direction: column;
+    border-width: 0px 0px 0px 1px;
+    border-color: black;
+    padding: 1em 1em 1em 2em;
+    width: 60%;
+}
+
+.card img {
+    width: 40%;
+}

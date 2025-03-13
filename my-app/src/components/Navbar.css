@@ -1,0 +1,28 @@
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin: 1em 4em 4em 4em;
+}
+
+.nav-bar img {
+    height: 3em;
+}
+
+.nav-bar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    align-items: end;
+}
+
+li {
+    list-style-type: none;
+    padding: 0 1em;
+    font-family: 'Lora';
+    font-weight: 150;
+    letter-spacing: 0.1em;
+}
