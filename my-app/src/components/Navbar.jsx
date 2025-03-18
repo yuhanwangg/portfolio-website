@@ -7,9 +7,9 @@ function NavBar() {
         <div className="nav-bar">
             <img src={Logo} alt="no logo" />
             <ul>
-                <li>about me</li>
-                <li>projects</li>
-                <li>contact</li>
+                <li><a href="#am">about me</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#contacts">contact</a></li>
                 <div className="redIcon"></div>
             </ul>
         </div>

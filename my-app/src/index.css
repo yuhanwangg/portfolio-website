@@ -31,6 +31,23 @@ p {
   font-size: 0.9em;
 }
 
+a {
+  font-family: 'Inter';
+  font-size: 1em;
+  color: black;
+  text-decoration: none;
+  font-style: italic;
+}
+
+a:hover {
+  color: red;
+  transition-duration: 0.5s;
+}
+
+a:visited {
+  color: black;
+}
+
 .italic-serif {
   font-family: 'DM Serif Text', serif;
 }

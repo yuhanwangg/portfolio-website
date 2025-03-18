@@ -1,8 +1,8 @@
 import React from 'react';
 import './Title.css';
 
-function Title({ text }) {
-    const vowels = ['e', 'i', 'o', 'u'];
+function Title({ text, textAlign = 'center' }) {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
 
     const getFontClass = (char) => {
         if (vowels.includes(char.toLowerCase())) {
@@ -14,7 +14,7 @@ function Title({ text }) {
     };
 
     return (
-        <h1 className="title">
+        <h1 className="title" style={{ textAlign }}>
             {text.split('').map((char, index) => (
                 <span key={index} className={getFontClass(char)}>
                     {char}
@@ -23,5 +23,4 @@ function Title({ text }) {
         </h1>
     );
 }
-
 export default Title;

@@ -1,0 +1,7 @@
+.lang-logo img {
+    width: 69px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 1em;
+}

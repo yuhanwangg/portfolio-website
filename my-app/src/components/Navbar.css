@@ -26,3 +26,10 @@ li {
     font-weight: 150;
     letter-spacing: 0.1em;
 }
+
+a {
+    font-family: 'Lora';
+    font-weight: 150;
+    font-style: normal;
+    letter-spacing: 0.1em;
+}

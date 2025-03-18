@@ -1,32 +1,42 @@
-.music-play {
+.component {
     display: flex;
     flex-direction: row;
     margin: 3em 0em 3em 0em;
     align-items: center;
 }
 
-.player-box {
+.musicPlayerCard {
     width: 80px;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
 }
 
-.album-cover {
+.musicPlayerImage img {
     position: absolute;
-    width: 50%;
-    height: 50%;
+    width: 55%;
+    height: 55%;
     border-radius: 50%;
+    /* border: 1px solid white; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.player-disc {
+.musicPlayerDetails h3 {
+    font-size: 1.2em;
+    margin: 0em;
+}
+
+.musicPlayerDetails p {
+    margin: 0.2em 0em;
+}
+
+.musicPlayerImage {
     width: 90%;
     height: 90%;
     border-radius: 50%;
@@ -34,6 +44,10 @@
     background-color: black;
     position: relative;
     animation: spin 5s linear infinite;
+}
+
+.musicPlayerDetails {
+    margin-left: 1em;
 }
 
 @keyframes spin {

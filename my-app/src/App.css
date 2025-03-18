@@ -1,5 +1,5 @@
 .section {
-    margin: 4.5em 6.5em 8em 6.5em;
+    margin: 5em 8em;
     display: flex;
 }
 
@@ -10,11 +10,11 @@
 }
 
 .heroRight img {
-    height: 800px;
+    height: 650px;
 }
 
 .heroLeft {
-    margin-top: 12em;
+    margin-top: 8em;
 }
 
 .heroRight {
@@ -30,19 +30,60 @@
 
 .am-left,
 .am-right {
-    width: 40%;
+    width: 45%;
+}
+
+.am-title {
+    margin-top: 6em;
 }
 
 .am-right {
-    margin-left: 40px;
+    margin-left: 0px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .am-left {
     padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.am-right p {
+    text-align: right;
+}
+
+.bottom-am {
+    margin-top: 2em;
 }
 
 #projects {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+#projects p {
+    font-size: 1em;
+}
+
+.contacts-top {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2em;
+}
+
+.contacts-bottom {
+    display: flex;
+    margin-left: 6em;
+    justify-content: flex-start;
 }

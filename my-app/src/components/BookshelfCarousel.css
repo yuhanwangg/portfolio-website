@@ -1,0 +1,47 @@
+.custom-swiper {
+    width: 100%;
+    max-height: 200px;
+    border-radius: 10px;
+    margin-bottom: 3em;
+}
+
+.custom-slide img {
+    border-radius: 8px;
+    object-fit: contain;
+    height: 200px;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.custom-prev,
+.custom-next {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.swiper-pagination-bullet {
+    background: rgb(140, 140, 140) !important;
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+    background: red !important;
+    /* Active dot color */
+    opacity: 1;
+}
