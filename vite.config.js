@@ -5,10 +5,10 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api": {  // ✅ All requests to /api will be forwarded
-        target: "http://localhost:5001",  // ✅ Your backend server
+      "/api": {
+        target: "http://localhost:5001",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""), // ✅ Remove "/api" prefix
+        rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
   },
