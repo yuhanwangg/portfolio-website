@@ -4,7 +4,7 @@ import './MusicPlayer.css'
 
 
 const BACKEND_URL = process.env.NODE_ENV === "production"
-    ? "https://yuhan-portfolio/api/now-playing"
+    ? "https://yuhan-portfolio.vercel.app/api/now-playing"
     : "http://localhost:5000/api/now-playing";
 
 const MusicPlayer = () => {
