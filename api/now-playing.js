@@ -37,11 +37,17 @@ export default async function handler(req, res) {
             },
         });
 
-        const textResponse = await response.text();
-        console.log(textResponse);
+        // Log status and body for debugging
+        console.log('Response status:', response.status);
+        const responseText = await response.text();
+        console.log('Response body:', responseText);
+
+        if (response.status === 204 || response.status > 400) {
+            return res.json({ error: "No song is currently playing" });
+        }
 
         try {
-            const song = JSON.parse(textResponse);
+            const song = JSON.parse(responseText); // Parse the response manually for debugging
             const nowPlaying = {
                 albumImageUrl: song.item.album.images[0].url,
                 artist: song.item.artists.map((artist) => artist.name).join(", "),
@@ -50,6 +56,11 @@ export default async function handler(req, res) {
                 songUrl: song.item.external_urls.spotify,
                 title: song.item.name,
             };
+
+            // Enable CORS headers to allow the front-end to access the API from a different origin
+            res.setHeader('Access-Control-Allow-Origin', '*');
+            res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+            res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
             res.json(nowPlaying);
         } catch (err) {
