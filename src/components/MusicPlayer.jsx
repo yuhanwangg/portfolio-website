@@ -2,23 +2,26 @@ import React, { useState, useEffect } from "react";
 import albumArt from "../assets/brat.png";
 import './MusicPlayer.css'
 
-const BACKEND_URL = "http://localhost:5000"; // Match your Express server
+
+const BACKEND_URL = process.env.NODE_ENV === "production"
+    ? "https://yuhan-portfolio/api/now-playing"
+    : "http://localhost:5000/api/now-playing";
 
 const MusicPlayer = () => {
     const [nowPlaying, setNowPlaying] = useState(null);
-    const [prevSong, setPrevSong] = useState(null); // Track previous song
+    const [prevSong, setPrevSong] = useState(null);
 
     useEffect(() => {
         const fetchNowPlaying = async () => {
             try {
-                const response = await fetch("/api/now-playing");
+                const response = await fetch(BACKEND_URL);
                 const data = await response.json();
 
                 if (data.error) {
                     return;
                 }
 
-                // Only update state if the song has changed
+
                 if (!prevSong || prevSong.title !== data.title) {
                     setNowPlaying(data);
                     setPrevSong(data);
@@ -28,7 +31,7 @@ const MusicPlayer = () => {
             }
         };
 
-        const interval = setInterval(fetchNowPlaying, 5000); // Refresh every 5s
+        const interval = setInterval(fetchNowPlaying, 30000);
         fetchNowPlaying();
 
         return () => clearInterval(interval);
