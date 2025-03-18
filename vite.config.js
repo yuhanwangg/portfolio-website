@@ -3,9 +3,9 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: process.env.VITE_BASE_PATH || '/yuhan-portfolio', // Keep base path if deployed to a subdirectory
+  base: process.env.VITE_BASE_PATH || "/yuhan-portfolio", // Keep the base path if needed
   server: {
-    // Proxy configuration for local development (only needed for local dev)
+    // local development proxy (you can keep this for local dev)
     proxy: {
       '/api': {
         target: 'http://localhost:5001',
@@ -13,9 +13,5 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
-  },
-  build: {
-    // Custom build settings if necessary
-    outDir: 'dist', // Can define your build output directory here
   },
 });
